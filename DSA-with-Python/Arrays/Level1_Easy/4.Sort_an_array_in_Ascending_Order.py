@@ -12,9 +12,9 @@ def bubble_sort(arr):
         for j in range(0, len(arr)-i-1):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
 array = [1, 7, 3, 6, 9, 15, 0, 2]
-print(bubble_sort(array))
-print("this is the ascending array : ", array)
+print("this is the ascending array : ", bubble_sort(array))
 
 '''**********************************************************************************************************
 Bubble Sort - n^2
