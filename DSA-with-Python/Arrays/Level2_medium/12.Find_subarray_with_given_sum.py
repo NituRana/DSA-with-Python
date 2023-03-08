@@ -1,5 +1,5 @@
 '''*******************************************************************************************************
-findn an array arr[] of non-negative integers and an integer sum, find a subarray that adds to a given sum.
+find an array arr[] of non-negative integers and an integer sum, find a subarray that adds to a given sum.
 
 Input: arr[] = [1, 4, 20, 3, 10, 5] sum = 33
 Output: Sum found between indexes 2 and 4
@@ -15,7 +15,7 @@ def sub_array(arr, n, sum):
             return
         else:
             for j in range(i+1, n):
-                currentSum += arr[i]
+                currentSum += arr[j]
                 if(currentSum == sum):
                     print("The sub array found between indexes",i,"and",j)
                     return
