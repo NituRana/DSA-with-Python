@@ -2,7 +2,7 @@
 Find the second most repeated word in a sequence in a given string,
 
 Input : "Hello here, I'm nitu rana"
-Output : o
+Output : l
 
 
 ***********************************************************************************************************'''
@@ -21,6 +21,6 @@ def second_most_repeated_word(strings):
         return sorted_count[1][0]
 
 # Example usage
-string = ["aaa", "bbb", "ccc", "bbb", "aaa", "aaa"]
+string = "Hello here, I'm nitu rana"
 result = second_most_repeated_word(string)
 print(result)
