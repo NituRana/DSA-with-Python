@@ -21,14 +21,15 @@ def get_index_for_insert_target_element(arr, target_element):
     arr_len = len(arr)
     min_idx = 0
     max_idx = arr_len - 1
-    mid = (min_idx + max_idx) // 2
-    ans = 0
+    ans = arr_len
     while min_idx <= max_idx:
+        mid = (min_idx + max_idx) // 2
         if target_element <= arr[mid]:
-            max_idx = mid - 1
-        else:
             ans = mid
             min_idx = mid + 1
+        else:
+            max_idx = mid - 1
+
     return ans
 
 arr = [1,2,4,7] 
