@@ -15,6 +15,10 @@ Input: N=5, array[] = {5,4,3,2,1}
 Output: 1,2,3,4,5
 Explanation: After sorting the array is: 1, 2, 3, 4, 5
 
+
+algo :
+step 1 : find the minimal 
+step 2 : swap the with the currect element position 
 '''
 
 def selection_sort(arr):
