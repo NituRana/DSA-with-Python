@@ -40,3 +40,60 @@ if __name__ == "__main__":
     head = insertHead(head, val)
 
     printLL(head)
+
+
+# Define the Node and LinkedList Classes
+
+    class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = Node(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" -> ")
+            current = current.next
+        print("None")
+
+    def insert_in_middle(self, data):
+        # Create a new node with the data
+        new_node = Node(data)
+        
+        # If the list is empty, the new node becomes the head
+        if not self.head:
+            self.head = new_node
+            return
+
+        # Use the slow and fast pointer technique to find the middle
+        slow = self.head
+        fast = self.head
+        prev = None
+
+        while fast and fast.next:
+            prev = slow
+            slow = slow.next
+            fast = fast.next.next
+
+        # Insert the new node in the middle
+        new_node.next = slow
+
+        if prev:
+            prev.next = new_node
+        else:
+            # If prev is None, it means the list had only one node
+            self.head = new_node
