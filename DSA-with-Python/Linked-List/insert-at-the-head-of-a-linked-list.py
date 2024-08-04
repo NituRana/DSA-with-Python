@@ -44,7 +44,7 @@ if __name__ == "__main__":
 
 # Define the Node and LinkedList Classes
 
-    class Node:
+class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
