@@ -23,7 +23,7 @@ class Node:
         self.data = data
         self.next = None
         self.prev = None
-        
+
 # Doubly Linked List class contains methods to manipulate the list
 class DoublyLinkedList:
     def __init__(self):
@@ -40,3 +40,13 @@ class DoublyLinkedList:
             last = last.next
         last.next = new_node
         new_node.prev = last
+
+# Method to insert a new node at the beginning of the list
+def prepend(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        self.head.prev = new_node
+        new_node.next = self.head
+        self.head = new_node
