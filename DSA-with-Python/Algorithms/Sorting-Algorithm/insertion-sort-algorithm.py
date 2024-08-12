@@ -30,4 +30,4 @@ def insertion_sort(arr):
     return arr
 
 arr = [13, 46, 24, 52, 20, 9]
-# print(f"---- output : {insertion_sort(arr)}")
+print(f"---- output : {insertion_sort(arr)}")
