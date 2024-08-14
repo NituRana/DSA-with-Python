@@ -54,7 +54,6 @@ class DoublyLinkedList:
     
     def deletion_in_dll(self, node):
         temp = self.head
-        print("------------------- node :", node)
         if temp is not None:
             if temp.data == node:
                 self.head = temp.next
