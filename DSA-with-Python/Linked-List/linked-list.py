@@ -55,6 +55,23 @@ class LinkedList:
         new_node.next = first_node
         return
 
+
+    def deletiona_in_ll(self, data):
+        temp = self.head
+        if temp is not None:
+            if temp.data == data:
+                self.head = temp.next
+            if temp.next is not None:
+                while temp.next:
+                    if temp.data == data:
+                        self.head = temp.next
+                        return
+                    temp = temp.next
+            else:
+                return ("This element not persent in Linked List")
+
+
+
     
     def display_elements_of_ll(self):
         arr_of_ele = []
@@ -71,4 +88,7 @@ ll.append_in_ll(4)
 ll.display_elements_of_ll()
 ll.prepend_in_ll(0)
 ll.display_elements_of_ll()
-
+ll.deletiona_in_ll(0)
+ll.prepend_in_ll(18)
+ll.prepend_in_ll(10)
+ll.display_elements_of_ll()
