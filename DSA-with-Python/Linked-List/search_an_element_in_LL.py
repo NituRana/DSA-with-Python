@@ -46,20 +46,24 @@ class Linked_list:
         temp = self.head
         if temp is not None:
             if temp.data == data:
-                return "This element is present in the linked list."
+                print("This element is present in the linked list.")
+                return
 
             if temp.next is not None:
-                while temp.next:
+                while temp:
                     if temp.data == data:
-                        return "This element is present in the linked list."
+                        print("This element is present in the linked list.")
+                        return
                     temp = temp.next
-
-                return "This element is not present in the linked list."
+                print("This element is not present in the linked list.")
+                return 
             else:
-                return "This element is not present in the linked list."
+                print("This element is not present in the linked list.")
+                return
 
         else:
-            return "Lisked list have no elements"
+            print("Lisked list have no elements")
+            return
         
     def display_elements_of_ll(self):
         arr_of_ele = []
@@ -75,8 +79,9 @@ ll.append_in_ll(9)
 ll.append_in_ll(4)
 ll.append_in_ll(18)
 ll.append_in_ll(10)
-ll.is_the_element_present(10)
 ll.display_elements_of_ll()
+ll.is_the_element_present(10)
+
 
 
 
