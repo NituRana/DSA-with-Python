@@ -51,21 +51,49 @@ class DoublyLinkedList:
             self.head.prev = new_node
             new_node.next = self.head
             self.head = new_node
+    
+    def deletion_in_dll(self, node):
+        temp = self.head
+        if temp is not None:
+            if temp.data == node:
+                self.head = temp.next
+                if self.head:
+                    self.head.prev = None
+                return
+
+        while temp is not None:
+            if temp.data == node:
+                break
+            temp = temp.next
+
+        if temp is None:
+            return
+        
+        if temp.next is not None:
+            temp.next.prev = temp.prev
+
+        if temp.prev is not None:
+            temp.prev.next = temp.next
+
 
     # method for the display DLL nodes
     def display(self):
-            # Initialize an empty list to store node data
-            node_list = []
-            temp = self.head
-            # Traverse the list and collect data from each node
-            while temp:
-                node_list.append(temp.data)
-                temp = temp.next
+        # Initialize an empty list to store node data
+        node_list = []
+        temp = self.head
+        # Traverse the list and collect data from each node
+        while temp:
+            node_list.append(temp.data)
+            temp = temp.next
 
-            print(f"These are the elements of DLL :{node_list}")
+        print(f"These are the elements of DLL :{node_list}")
 
 
 dll = DoublyLinkedList()
 dll.append_in_dll(5)
 dll.append_in_dll(3)
+dll.append_in_dll(8)
+dll.deletion_in_dll(3)
+dll.prepend(0)
+dll.append_in_dll(4)
 dll.display()
