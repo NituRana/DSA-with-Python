@@ -33,6 +33,7 @@ class Doubly_linkend_list:
             while temp.next:
                 temp = temp.next
         temp.next = new_node
+        new_node.back = temp
         return
     
     def reverse_in_dll_using_stack(self):
@@ -75,7 +76,66 @@ dll.display_ele_of_dll()
 
 
 
-# Approach change the link (more optimal way):
+# Approach change the links (more optimal way):
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.back = None
+        self.next = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+    
+    def append_in_dll(self, data):
+        new_node = Node(data)
+        temp = self.head
+        if temp is None:
+            self.head = new_node
+            return
+        if temp.next:
+            while temp.next:
+                temp = temp.next
+        temp.next = new_node
+        new_node.back = temp
+        return
+    def reverse_in_dll(self):
+        temp = self.head
+        if temp is None:
+            print(" Dll is empty.")
+            return
+        while temp:
+            next_node = temp.next
+            temp.next = temp.back
+            temp.back = next_node
+
+            # Move temp to the previous node (which is now temp.prev after the swap)
+            if temp.back is None:  # If we're at the end of the list, this will be the new head
+                self.head = temp
+            temp = temp.back  # Move to the next node in the original list order
+        return
+    def dispaly_elements_of_dll(self):
+        temp = self.head
+        arr_of_ele = []
+        if temp is None:
+            print("DLL is empty.")
+            return
+        while temp:
+            arr_of_ele.append(temp.data)
+            temp = temp.next
+        print(" Dll_2 elements :", arr_of_ele)
+        return arr_of_ele
+
+dll_2 = DoublyLinkedList()
+dll_2.append_in_dll(72)
+dll_2.append_in_dll(6)
+dll_2.append_in_dll(34)
+dll_2.append_in_dll(21)
+dll_2.dispaly_elements_of_dll()
+dll_2.reverse_in_dll()
+dll_2.dispaly_elements_of_dll()
+
 # class Node:
 #     def __init__(self, data):
 #         self.data = data
