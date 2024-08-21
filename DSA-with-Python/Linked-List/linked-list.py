@@ -40,7 +40,6 @@ class LinkedList:
             return
         if last_node.next:
             while last_node.next:
-                last_node = last_node
                 last_node = last_node.next
         last_node.next = new_node
         return
