@@ -122,9 +122,10 @@ class LiskedListTwo:
             
 ll = LiskedListTwo()
 ll.append_in_ll(98)
-ll.append_in_ll(6)
-ll.append_in_ll(43)
-ll.append_in_ll(51)
+# ll.append_in_ll(6)
+# ll.append_in_ll(43)
+# ll.append_in_ll(51)
 ll.dispaly_the_elements_of_ll()
 ll.reverse_in_ll()
 ll.dispaly_the_elements_of_ll()
+
