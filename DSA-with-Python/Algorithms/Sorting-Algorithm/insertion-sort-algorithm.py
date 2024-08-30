@@ -20,14 +20,15 @@ Explanation: After sorting the array is: 1,2,3,4,5
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
+        
         j = i - 1
-        for k in range(i - 1, -2, -1):
-            if k >= 0 and arr[k] > key:
-                arr[k + 1] = arr[k]
-            else:
-                arr[k + 1] = key
-                break
-    return arr
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
 
-arr = [13, 46, 24, 52, 20, 9]
-print(f"---- output : {insertion_sort(arr)}")
+    return arr
+arr = [12, 11, 13, 5, 6]
+print("Un-sort array:", arr)
+sorted_arr = insertion_sort(arr)
+print("Sorted array:", sorted_arr)
