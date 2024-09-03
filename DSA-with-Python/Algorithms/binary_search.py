@@ -29,7 +29,7 @@ def binary_search_revisoin(arr, target_element):
 
 
 arr = [3, 4, 6, 7, 9, 12, 16, 17]
-target = 6
+target = 16
 # res = binary_search(arr, target)
 res = binary_search_revisoin(arr, target)
 if res == -1:
