@@ -28,8 +28,6 @@ Output : sihT si a tset gnirts
     # return output_string
 
 
-
-
 def resersed_the_word(input_string):
     list_of_words = input_string.split()
     output_string = ""
