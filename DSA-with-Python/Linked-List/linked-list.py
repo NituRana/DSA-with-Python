@@ -16,6 +16,8 @@ is null (or back to the head in a circular linked list).
 
 
 '''
+
+'''-------------------------------------------------------------
 class Node:
     def __init__(self, data1, next1=None):
         self.data = data1
@@ -91,3 +93,73 @@ ll.deletiona_in_ll(0)
 ll.prepend_in_ll(18)
 ll.prepend_in_ll(10)
 ll.display_elements_of_ll()
+
+-----------------------------------------------------'''
+
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkendList:
+    def __init__(self):
+        self.head = None
+
+    def append_in_ll(self, data):
+        new_node = Node(data)
+        current_node = self.head
+        if current_node is None:
+            self.head = new_node
+            return
+        while current_node.next:
+            current_node = current_node.next
+        current_node.next = new_node
+        return
+
+    def prepend_in_ll(self, data):
+        new_node = Node(data)
+        current_node = self.head
+        if current_node is None:
+            self.head = new_node
+            return
+        new_node.next = current_node
+        self.head = new_node
+        return
+
+    def deletion_in_ll(self, data):
+        element = data
+        current_node = self.head
+        if current_node is None:
+            return
+        if current_node.data == element:
+            self.head = None
+            return
+        prev_node = None
+        while current_node:
+            if current_node.data == element:
+                prev_node.next = current_node.next
+                return
+            prev_node = current_node
+            current_node = current_node.next
+        return
+
+    def display_the_ele_of_ll(self):
+        arr_ele = []
+        current_node = self.head
+        while current_node:
+            arr_ele.append(current_node.data)
+            current_node = current_node.next
+        return arr_ele
+    
+    
+ll = LinkendList()
+ll.append_in_ll(9)
+ll.append_in_ll(4)
+ll.prepend_in_ll(8)
+ll.append_in_ll(5)
+ll.append_in_ll(2)
+print("----------display_the_ele_of_ll 1:--------- ", ll.display_the_ele_of_ll())
+print("----------deletion_in_ll :--------- ", ll.deletion_in_ll(4))
+print("----------display_the_ele_of_ll 2:--------- ", ll.display_the_ele_of_ll())
