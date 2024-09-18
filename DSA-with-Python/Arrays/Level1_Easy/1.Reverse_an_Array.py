@@ -19,17 +19,14 @@ def reverse_arr(actual_arr):
 print(reverse_arr([1, 7, 3, 6, 9, 15, 0, 2]))
 
 
-
-
-
-
 def reverse_the_arr(arr):
-    reverse_arr = []
-    for i in arr(len(arr), 1):
-        reverse_arr.append(i)
-        return reverse_arr
-
-print("----------  reverse arr :", reverse_arr([5, 8, 2, 4, 7, 9, 1]))
+    rev_arr = []
+    for i in range((len(arr) - 1), 0):
+        rev_arr.append(i)
+    return rev_arr
+array = [5, 8, 2, 4, 7, 9, 1]
+print(f"-------------------- input  :{array}-----")
+print("----------  reverse arr :", reverse_arr(array))
 
 '''****************************************
 Big O :- n
