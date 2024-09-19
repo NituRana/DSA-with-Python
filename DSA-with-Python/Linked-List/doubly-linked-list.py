@@ -18,19 +18,16 @@ prev: A reference to the previous node in the list.
 '''
 
 
-# Node class represents each element in the doubly linked list
 class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
         self.prev = None
 
-# Doubly Linked List class contains methods to manipulate the list
 class DoublyLinkedList:
     def __init__(self):
         self.head = None
 
-    # Method to append a new node at the end of the list
     def append_in_dll(self, data):
         new_node = Node(data)
         if self.head is None:
@@ -42,7 +39,6 @@ class DoublyLinkedList:
         last.next = new_node
         new_node.prev = last
 
-    # Method to insert a new node at the beginning of the list
     def prepend(self, data):
             new_node = Node(data)
             if self.head is None:
@@ -76,12 +72,9 @@ class DoublyLinkedList:
             temp.prev.next = temp.next
 
 
-    # method for the display DLL nodes
     def display(self):
-        # Initialize an empty list to store node data
         node_list = []
         temp = self.head
-        # Traverse the list and collect data from each node
         while temp:
             node_list.append(temp.data)
             temp = temp.next
