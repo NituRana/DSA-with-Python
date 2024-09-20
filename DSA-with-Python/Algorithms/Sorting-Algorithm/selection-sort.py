@@ -34,16 +34,23 @@ step 2 : swap the with the currect element position
         
 #     return arr
 
+# def selection_sort(arr):
+#     for i in range(len(arr)):
+#         sorted_ele = i
+#         for j in range(i+1, len(arr)):
+#             if arr[sorted_ele] > arr[j]:
+#                 sorted_ele = j
+#         arr[i], arr[sorted_ele] = arr[sorted_ele], arr[i]
+#     return arr
+                
 def selection_sort(arr):
     for i in range(len(arr)):
-        sorted_ele = i
+        last_ele_of_sort = i
         for j in range(i+1, len(arr)):
-            if arr[sorted_ele] > arr[j]:
-                sorted_ele = j
-        arr[i], arr[sorted_ele] = arr[sorted_ele], arr[i]
+            if arr[last_ele_of_sort] > arr[j]:
+                last_ele_of_sort = j
+        arr[i], arr[last_ele_of_sort] = arr[last_ele_of_sort], arr[i]
     return arr
-                
-
 
 arr = [13, 46, 24, 52, 20, 9]
 print(f"---- Input : {arr}")
