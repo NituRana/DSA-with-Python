@@ -231,6 +231,17 @@ class LinkedList:
         curr_node = new_node
         return
     
+    def prepend_in_ll(self, data):
+        new_node = Node(data)
+        curr_node = self.head
+        if curr_node is None:
+            self.head = new_node
+            return
+        self.head = new_node
+        new_node.next = curr_node
+        return
+        
+    
     def display_in_ll(self):
         curr_node = self.head
         array_of_elements = []
@@ -240,11 +251,11 @@ class LinkedList:
         return array_of_elements
 
 ll = LinkedList()
-# ll.prepend_in_ll(3)
+ll.prepend_in_ll(3)
 ll.append_in_ll(9)
 ll.append_in_ll(4)
-# ll.prepend_in_ll(0)
-# ll.prepend_in_ll(8)
+ll.prepend_in_ll(0)
+ll.prepend_in_ll(8)
 ll.append_in_ll(5)
 # ll.deletion_in_ll(3)
 ll.append_in_ll(2)
