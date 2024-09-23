@@ -226,9 +226,9 @@ class LinkedList:
         if curr_node.next is None:
             curr_node.next = new_node
             return
-        while curr_node:
+        while curr_node.next:
             curr_node = curr_node.next
-        curr_node = new_node
+        curr_node.next = new_node
         return
     
     def prepend_in_ll(self, data):
@@ -241,6 +241,19 @@ class LinkedList:
         new_node.next = curr_node
         return
         
+
+    def deletion_in_ll(self, data):
+        curr_node = self.head
+        if curr_node is None:
+            return "their is no elements in linked list."
+        prev_node = None
+        while curr_node:
+            if curr_node.data == data:
+                prev_node.next = curr_node.next
+            prev_node = curr_node
+            curr_node = curr_node.next
+        return
+
     
     def display_in_ll(self):
         curr_node = self.head
@@ -257,8 +270,8 @@ ll.append_in_ll(4)
 ll.prepend_in_ll(0)
 ll.prepend_in_ll(8)
 ll.append_in_ll(5)
-# ll.deletion_in_ll(3)
+ll.deletion_in_ll(3)
 ll.append_in_ll(2)
 print("----------display_the_ele_of_ll 1:--------- ", ll.display_in_ll())
-# print("----------deletion_in_ll :--------- ", ll.deletion_in_ll(4))
+print("----------deletion_in_ll :--------- ", ll.deletion_in_ll(4))
 print("----------display_the_ele_of_ll 2:--------- ", ll.display_in_ll())
