@@ -5,17 +5,6 @@ Output : Minimum length word: a
 
 
 ***********************************************************************************************************'''
-def find_min_max_words(string):
-    words = string.split() #splits the string at every whitespace and returns a list of words.
-    min_word = max_word = words[0]
-
-    for word in words:
-        if len(word) < len(min_word):
-            min_word = word
-        elif len(word) > len(max_word):
-            max_word = word
-
-    return min_word, max_word
 
 # revision
 # def max_min_word(string):
@@ -28,6 +17,20 @@ def find_min_max_words(string):
 #             max_word = word
 #     return min_word, max_word
 
+def min_max_of_string(string):
+    words = string.split()
+    min_word = words[0]
+    max_word = words[0]
+    for word in words:
+        if len(word) < len(min_word):
+            min_word = word
+        if len(word) > len(max_word):
+            max_word = word
+    return min_word, max_word
+string = "Hi there, my self neeturana waht about yous ?"
+min_word, max_word = min_max_of_string(string)
+print("---------------------------- min_word : ", min_word)
+print("---------------------------- max_word : ", max_word)
 
 
 
