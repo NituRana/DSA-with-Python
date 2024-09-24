@@ -55,3 +55,18 @@ def selection_sort(arr):
 arr = [13, 46, 24, 52, 20, 9]
 print(f"---- Input : {arr}")
 print(f"---- output : {selection_sort(arr)}")
+
+
+# def selection_sort(unsort_arr):
+#     for i in range(0, len(unsort_arr)-1):
+#         min_ind = i
+#         for j in range(i+1, len(unsort_arr)):
+#             if unsort_arr[j] < unsort_arr[min_ind]:
+#                 min_ind = j
+#         unsort_arr[i], unsort_arr[min_ind] = unsort_arr[min_ind], unsort_arr[i]
+#     return unsort_arr
+
+# array = [46, 78, 23, 15, 56, 90, 42, 12]
+# print("--------------------- unsorted array :", array)
+# sorted_array = selection_sort(array)
+# print("--------------------- sorted array :", sorted_array)
