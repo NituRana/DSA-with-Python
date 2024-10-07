@@ -66,7 +66,20 @@ print(f"---- output : {selection_sort(arr)}")
 #         unsort_arr[i], unsort_arr[min_ind] = unsort_arr[min_ind], unsort_arr[i]
 #     return unsort_arr
 
-# array = [46, 78, 23, 15, 56, 90, 42, 12]
-# print("--------------------- unsorted array :", array)
-# sorted_array = selection_sort(array)
-# print("--------------------- sorted array :", sorted_array)
+
+def insertion_sort(arr):
+    curr_min = arr[0]
+    for i in range(1, len(arr)):
+        curr_min = arr[i]
+        j = i - 1
+        while j >= 0 and arr[j] < curr_min:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j+1] = curr_min
+    return arr
+
+
+array = [46, 28, 23, 15, 56, 90, 42, 12]
+print("--------------------- unsorted array :", array)
+sorted_array = insertion_sort(array)
+print("--------------------- sorted array :", sorted_array)
