@@ -96,68 +96,11 @@ ll.display_elements_of_ll()
 
 -----------------------------------------------------'''
 
-
-
 # class Node:
 #     def __init__(self, data):
 #         self.data = data
 #         self.next = None
 
-# class LinkendList:
-#     def __init__(self):
-#         self.head = None
-
-#     def append_in_ll(self, data):
-#         new_node = Node(data)
-#         current_node = self.head
-#         if current_node is None:
-#             self.head = new_node
-#             return
-#         while current_node.next:
-#             current_node = current_node.next
-#         current_node.next = new_node
-#         return
-
-#     def prepend_in_ll(self, data):
-#         new_node = Node(data)
-#         current_node = self.head
-#         if current_node is None:
-#             self.head = new_node
-#             return
-#         new_node.next = current_node
-#         self.head = new_node
-#         return
-
-#     def deletion_in_ll(self, data):
-#         element = data
-#         current_node = self.head
-#         if current_node is None:
-#             return
-#         if current_node.data == element:
-#             self.head = None
-#             return
-#         prev_node = None
-#         while current_node:
-#             if current_node.data == element:
-#                 prev_node.next = current_node.next
-#                 return
-#             prev_node = current_node
-#             current_node = current_node.next
-#         return
-
-#     def display_the_ele_of_ll(self):
-#         arr_ele = []
-#         current_node = self.head
-#         while current_node:
-#             arr_ele.append(current_node.data)
-#             current_node = current_node.next
-#         return arr_ele
-    
-    
-# class Node:
-#     def __init__(self, data):
-#         self.data = data
-#         self.next = None
 # class LinkedList:
 #     def __init__(self):
 #         self.head = None
@@ -166,29 +109,31 @@ ll.display_elements_of_ll()
 #         new_node = Node(data)
 #         curr_node = self.head
 #         if curr_node is None:
-#             self.head = curr_node
+#             self.head = new_node
+#             return 
+#         if curr_node.next is None:
+#             curr_node.next = new_node
 #             return
 #         while curr_node.next:
 #             curr_node = curr_node.next
 #         curr_node.next = new_node
 #         return
+    
 #     def prepend_in_ll(self, data):
 #         new_node = Node(data)
-#         if self.head is None:
+#         curr_node = self.head
+#         if curr_node is None:
 #             self.head = new_node
 #             return
-#         curr_node = self.head
 #         self.head = new_node
 #         new_node.next = curr_node
 #         return
+        
+
 #     def deletion_in_ll(self, data):
 #         curr_node = self.head
 #         if curr_node is None:
-#             return "Their is no node in linked list."
-#         if curr_node.data == data:
-#             self.head = None
-#             return
-
+#             return "their is no elements in linked list."
 #         prev_node = None
 #         while curr_node:
 #             if curr_node.data == data:
@@ -196,17 +141,28 @@ ll.display_elements_of_ll()
 #             prev_node = curr_node
 #             curr_node = curr_node.next
 #         return
+
+    
 #     def display_in_ll(self):
 #         curr_node = self.head
-#         ele_array = []
-#         if curr_node:
-#             while curr_node:
-#                 ele_array.append(curr_node.data)
-#                 curr_node = curr_node.next
-#             return ele_array
-#         else:
-#             return []
+#         array_of_elements = []
+#         while curr_node:
+#             array_of_elements.append(curr_node.data)
+#             curr_node = curr_node.next
+#         return array_of_elements
 
+# ll = LinkedList()
+# ll.prepend_in_ll(3)
+# ll.append_in_ll(9)
+# ll.append_in_ll(4)
+# ll.prepend_in_ll(0)
+# ll.prepend_in_ll(8)
+# ll.append_in_ll(5)
+# ll.deletion_in_ll(3)
+# ll.append_in_ll(2)
+# print("----------display_the_ele_of_ll 1:--------- ", ll.display_in_ll())
+# print("----------deletion_in_ll :--------- ", ll.deletion_in_ll(4))
+# print("----------display_the_ele_of_ll 2:--------- ", ll.display_in_ll())
 
 class Node:
     def __init__(self, data):
@@ -216,62 +172,30 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
-
-    def append_in_ll(self, data):
-        new_node = Node(data)
+    
+    def append_in_linked_list(self, data):
         curr_node = self.head
-        if curr_node is None:
+        new_node = Node(data)
+        if self.head is None:
             self.head = new_node
-            return 
-        if curr_node.next is None:
-            curr_node.next = new_node
-            return
+            return True
         while curr_node.next:
             curr_node = curr_node.next
         curr_node.next = new_node
-        return
+        return True
     
-    def prepend_in_ll(self, data):
-        new_node = Node(data)
+    def display_in_linked_list(self):
+        arr_of_ele = []
         curr_node = self.head
-        if curr_node is None:
-            self.head = new_node
-            return
-        self.head = new_node
-        new_node.next = curr_node
-        return
-        
-
-    def deletion_in_ll(self, data):
-        curr_node = self.head
-        if curr_node is None:
-            return "their is no elements in linked list."
-        prev_node = None
         while curr_node:
-            if curr_node.data == data:
-                prev_node.next = curr_node.next
-            prev_node = curr_node
+            arr_of_ele.append(curr_node.data)
             curr_node = curr_node.next
-        return
-
-    
-    def display_in_ll(self):
-        curr_node = self.head
-        array_of_elements = []
-        while curr_node:
-            array_of_elements.append(curr_node.data)
-            curr_node = curr_node.next
-        return array_of_elements
+        print(f"----------- linked list elements: {arr_of_ele}")
+        return arr_of_ele
 
 ll = LinkedList()
-ll.prepend_in_ll(3)
-ll.append_in_ll(9)
-ll.append_in_ll(4)
-ll.prepend_in_ll(0)
-ll.prepend_in_ll(8)
-ll.append_in_ll(5)
-ll.deletion_in_ll(3)
-ll.append_in_ll(2)
-print("----------display_the_ele_of_ll 1:--------- ", ll.display_in_ll())
-print("----------deletion_in_ll :--------- ", ll.deletion_in_ll(4))
-print("----------display_the_ele_of_ll 2:--------- ", ll.display_in_ll())
+ll.append_in_linked_list(2)
+ll.append_in_linked_list(7)
+ll.append_in_linked_list(3)
+ll.append_in_linked_list(9)
+ll.display_in_linked_list()
