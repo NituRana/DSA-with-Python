@@ -184,6 +184,16 @@ class LinkedList:
         curr_node.next = new_node
         return True
     
+    def prepend_in_linked_list(self, data):
+        new_node = Node(data)
+        curr_node = self.head
+        if curr_node is None:
+            self.head = new_node
+            return True
+        self.head = new_node
+        new_node.next = curr_node
+        return True
+    
     def display_in_linked_list(self):
         arr_of_ele = []
         curr_node = self.head
