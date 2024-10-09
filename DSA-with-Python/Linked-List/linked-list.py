@@ -194,6 +194,22 @@ class LinkedList:
         new_node.next = curr_node
         return True
     
+    def delete_in_linked_list(self, data):
+        curr_node = self.head
+        if curr_node is None:
+            return "Empty linked list."
+        if curr_node.data == data:
+            self.head = curr_node.next
+            return True
+        prev_node = None
+        while curr_node:
+            if curr_node.data == data:
+                prev_node.next = curr_node.next
+                return True
+            prev_node = curr_node
+            curr_node = curr_node.next
+        return True
+    
     def display_in_linked_list(self):
         arr_of_ele = []
         curr_node = self.head
@@ -208,4 +224,7 @@ ll.append_in_linked_list(2)
 ll.append_in_linked_list(7)
 ll.append_in_linked_list(3)
 ll.append_in_linked_list(9)
+ll.prepend_in_linked_list(17)
+ll.display_in_linked_list()
+ll.delete_in_linked_list(3)
 ll.display_in_linked_list()
