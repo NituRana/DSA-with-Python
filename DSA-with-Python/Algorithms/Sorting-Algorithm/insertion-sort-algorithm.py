@@ -20,15 +20,19 @@ Explanation: After sorting the array is: 1,2,3,4,5
 
 def insertion_sort(arr):
     for i in range(1, len(arr)):
-        min_ele = arr[i]
-        j = i-1
-        while j >=0 and min_ele < arr[j]:
-            arr[j+1] = arr[j]
-            j -=1
-        arr[j+1] = min_ele
+        curr_ele = arr[i]
+        j = i - 1
+        while curr_ele < arr[j] and j >= 0:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j+1] = curr_ele
+    print("------------------- sorted array :", arr)
     return arr
 
-array = [46, 28, 23, 15, 56, 90, 42, 12]
-print("--------------------- unsorted array :", array)
-sorted_array = insertion_sort(array)
-print("--------------------- sorted array :", sorted_array)
+# arr = [23, 4, 24, 15, 67, 345, 78, 32]
+# insertion_sort(arr)
+
+# array = [46, 28, 23, 15, 56, 90, 42, 12]
+# print("--------------------- unsorted array :", array)
+# sorted_array = insertion_sort(array)
+# print("--------------------- sorted array :", sorted_array)
