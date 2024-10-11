@@ -53,7 +53,6 @@ Output: 1,2,3,4,5,8,23
 
 
 
-
 def merge_sort(unsort_arr):
     if len(unsort_arr)<= 1:
         return unsort_arr
