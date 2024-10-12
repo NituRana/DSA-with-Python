@@ -26,11 +26,12 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j]
             j -= 1
         arr[j+1] = curr_ele
-    print("------------------- sorted array :", arr)
     return arr
 
-# arr = [23, 4, 24, 15, 67, 345, 78, 32]
-# insertion_sort(arr)
+arr = [23, 4, 24, 15, 67, 345, 78, 32]
+print("------------------- un-sorted array :", arr)
+res = insertion_sort(arr)
+print("------------------- sorted array :", res)
 
 # array = [46, 28, 23, 15, 56, 90, 42, 12]
 # print("--------------------- unsorted array :", array)
