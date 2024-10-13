@@ -43,43 +43,29 @@ step 2 : swap the with the currect element position
 #         arr[i], arr[sorted_ele] = arr[sorted_ele], arr[i]
 #     return arr
                 
+# def selection_sort(arr):
+#     for i in range(len(arr)):
+#         last_ele_of_sort = i
+#         for j in range(i+1, len(arr)):
+#             if arr[last_ele_of_sort] > arr[j]:
+#                 last_ele_of_sort = j
+#         arr[i], arr[last_ele_of_sort] = arr[last_ele_of_sort], arr[i]
+#     return arr
+
+# arr = [13, 46, 24, 52, 20, 9]
+# print(f"---- Input : {arr}")
+# print(f"---- output : {selection_sort(arr)}")
+
 def selection_sort(arr):
     for i in range(len(arr)):
-        last_ele_of_sort = i
+        curr_ele = i
         for j in range(i+1, len(arr)):
-            if arr[last_ele_of_sort] > arr[j]:
-                last_ele_of_sort = j
-        arr[i], arr[last_ele_of_sort] = arr[last_ele_of_sort], arr[i]
+            if arr[curr_ele] > arr[j]:
+                curr_ele = j
+        arr[i], arr[curr_ele] = arr[curr_ele], arr[i]
     return arr
-
-arr = [13, 46, 24, 52, 20, 9]
-print(f"---- Input : {arr}")
-print(f"---- output : {selection_sort(arr)}")
-
-
-# def selection_sort(unsort_arr):
-#     for i in range(0, len(unsort_arr)-1):
-#         min_ind = i
-#         for j in range(i+1, len(unsort_arr)):
-#             if unsort_arr[j] < unsort_arr[min_ind]:
-#                 min_ind = j
-#         unsort_arr[i], unsort_arr[min_ind] = unsort_arr[min_ind], unsort_arr[i]
-#     return unsort_arr
-
-
-def insertion_sort(arr):
-    curr_min = arr[0]
-    for i in range(1, len(arr)):
-        curr_min = arr[i]
-        j = i - 1
-        while j >= 0 and arr[j] < curr_min:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j+1] = curr_min
-    return arr
-
 
 array = [46, 28, 23, 15, 56, 90, 42, 12]
 print("--------------------- unsorted array :", array)
-sorted_array = insertion_sort(array)
+sorted_array = selection_sort(array)
 print("--------------------- sorted array :", sorted_array)
