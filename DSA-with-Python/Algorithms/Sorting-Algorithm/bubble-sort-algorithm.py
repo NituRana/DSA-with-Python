@@ -52,14 +52,24 @@ Explanation: After sorting we get 1,2,3,4,5
 
 
 
-def bubble_sort(unsort_array):
-    for i in range(len(unsort_array)-1):
-        for j in range(i+1, len(unsort_array)):
-            if unsort_array[i] > unsort_array[j]:
-                temp = unsort_array[i]
-                unsort_array[i] = unsort_array[j]
-                unsort_array[j] = temp
-    return unsort_array
+# def bubble_sort(unsort_array):
+#     for i in range(len(unsort_array)-1):
+#         for j in range(i+1, len(unsort_array)):
+#             if unsort_array[i] > unsort_array[j]:
+#                 temp = unsort_array[i]
+#                 unsort_array[i] = unsort_array[j]
+#                 unsort_array[j] = temp
+#     return unsort_array
+
+
+def bubble_sort(arr):
+    for i in range(0, len(arr)-1):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+    return arr
 
 
 
