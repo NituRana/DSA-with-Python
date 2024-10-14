@@ -82,7 +82,7 @@ Output: 1,2,3,4,5,8,23
 
 
 def merge_sort(unsort_arr):
-    if len(unsort_arr)==1:
+    if len(unsort_arr)<=1:
         return unsort_arr
     mid = len(unsort_arr) // 2
     left_arr = merge_sort(unsort_arr[:mid])
