@@ -32,3 +32,17 @@ res = reverse_the_arr(array)
 Big O :- n
 
 ****************************************'''
+
+
+
+
+def reverse_the_array_element(arr):
+    res_array = []
+    for i in range((len(arr)-1), -1, -1):
+        res_array.append(arr[i])
+    return res_array
+
+array = [12, 45, 23, 78, 0, 56, 40, 69]
+print("------------- input array :", array)
+res = reverse_the_array_element(array)
+print("-------------- output array :", res)
