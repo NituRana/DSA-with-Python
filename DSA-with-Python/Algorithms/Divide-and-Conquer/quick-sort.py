@@ -82,7 +82,6 @@ algo :
  step 1. 
 
 '''
-
 def quick_sort(arr, low, high):
     if low < high:
         partition_ele = partition(arr, low, high)
