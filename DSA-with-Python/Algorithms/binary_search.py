@@ -13,7 +13,6 @@ def binary_search_revisoin(arr, sear_ele):
                 min_ele = mid + 1
     return -1
 
-
 arr = [3, 4, 6, 7, 9, 12, 16, 17]
 target = 4
 # res = binary_search(arr, target)
