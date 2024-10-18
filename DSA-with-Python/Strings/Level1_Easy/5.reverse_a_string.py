@@ -19,15 +19,6 @@ Output : sihT si a tset gnirts
 
 ***********************************************************************************************************'''
 
-# def resersed_the_word(input_string):
-    # words_list = input_string.split()
-    # output_string = ""
-    # for word in words_list:
-    #     reverse_word = word[::-1]
-    #     output_string += reverse_word + " "
-    # return output_string
-
-
 def resersed_the_word(input_string):
     list_of_words = input_string.split()
     output_string = ""
