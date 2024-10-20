@@ -20,11 +20,11 @@ Output : structure
 #     return largest_word
 
 def largest_word(string):
-    list_of_words = string.split()
-    max_word = ""
-    for current_word in list_of_words:
-        if len(max_word) < len(current_word):
-            max_word = current_word
+    list_of_word = string.split()
+    max_word = list_of_word[0]
+    for word in list_of_word:
+        if len(max_word) < len(word):
+            max_word = word
     return max_word
 
 
