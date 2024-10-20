@@ -34,6 +34,6 @@ def second_most_repeated_word(string):
     sorted_dict = dict(sorted(char_dict.items(), key=lambda item: item[1], reverse=True))
     return list(sorted_dict.keys())[1]
 
-string = "Hello here, I'm nitu rana"
+string = "I am from uttarakhan, and uttarakhand is the beautiful hill station. "
 result = second_most_repeated_word(string)
 print(result)
