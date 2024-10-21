@@ -39,13 +39,8 @@ def insertion_sort(input_arr):
             j -= 1
         input_arr[j+1] = curr_ele
     return arr
-        
+
 arr = [23, 4, 24, 15, 67, 345, 78, 32]
 print("------------------- un-sorted array :", arr)
 res = insertion_sort(arr)
 print("------------------- sorted array :", res)
-
-# array = [46, 28, 23, 15, 56, 90, 42, 12]
-# print("--------------------- unsorted array :", array)
-# sorted_array = insertion_sort(array)
-# print("--------------------- sorted array :", sorted_array)
