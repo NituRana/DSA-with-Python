@@ -22,6 +22,7 @@ Output : structure
 def largest_word(string):
     list_of_word = string.split()
     max_word = list_of_word[0]
+
     for word in list_of_word:
         if len(max_word) < len(word):
             max_word = word
