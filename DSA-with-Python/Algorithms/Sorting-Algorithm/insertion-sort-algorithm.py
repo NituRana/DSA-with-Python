@@ -28,8 +28,6 @@ Explanation: After sorting the array is: 1,2,3,4,5
 #         arr[j+1] = curr_ele
 #     return arr
 
-
-
 def insertion_sort(input_arr):
     for i in range(1, len(input_arr)):
         curr_ele = input_arr[i]
