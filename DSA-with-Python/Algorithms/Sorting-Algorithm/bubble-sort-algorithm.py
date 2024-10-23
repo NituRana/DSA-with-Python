@@ -71,8 +71,6 @@ def bubble_sort(arr):
                 arr[j] = temp
     return arr
 
-
-
 input_array = [7, 8, 4, 6, 0, 3, 24, 15, 9]
 print("--------------- input_array :", input_array)
 sorted_array = bubble_sort(input_array)
