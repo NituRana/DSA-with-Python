@@ -31,7 +31,7 @@ Explanation: After sorting the array is: 1,2,3,4,5
 def insertion_sort(input_arr):
     for i in range(1, len(input_arr)):
         curr_ele = input_arr[i]
-        j  = i-1
+        j = i-1
         while j >= 0 and input_arr[j] > curr_ele:
             input_arr[j+1] = input_arr[j]
             j -= 1
