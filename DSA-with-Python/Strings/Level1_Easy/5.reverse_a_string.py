@@ -23,8 +23,8 @@ def resersed_the_word(input_string):
     list_of_words = input_string.split()
     output_string = ""
     for current_word in list_of_words:
-        resersed_curr_word = current_word[::-1]
         output_string += resersed_curr_word + " "
+        resersed_curr_word = current_word[::-1]
     return output_string
 input_string = "This is a test string"
 print("----------------Input string :", input_string)
