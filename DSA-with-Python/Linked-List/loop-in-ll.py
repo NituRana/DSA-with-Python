@@ -68,7 +68,6 @@ class LinkedList:
             
             visited[current] = True
             current = current.next
-        
         return 0
 
 ll1 = LinkedList()
@@ -81,15 +80,4 @@ ll1.append(5)
 ll1.create_loop(2)
 
 loop_length = ll1.find_loop_length()
-print(loop_length)
-
-ll2 = LinkedList()
-ll2.append(1)
-ll2.append(2)
-ll2.append(3)
-ll2.append(4)
-ll2.append(9)
-ll2.append(9)
-
-loop_length = ll2.find_loop_length()
 print(loop_length)
