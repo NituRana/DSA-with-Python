@@ -218,7 +218,7 @@ class LinkedList:
             curr_node = curr_node.next
         print(f"----------- linked list elements: {arr_of_ele}")
         return arr_of_ele
-
+        
 ll = LinkedList()
 ll.append_in_linked_list(2)
 ll.append_in_linked_list(7)
