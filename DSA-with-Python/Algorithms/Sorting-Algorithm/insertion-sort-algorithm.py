@@ -18,15 +18,6 @@ Explanation: After sorting the array is: 1,2,3,4,5
 
 '''
 
-# def insertion_sort(arr):
-#     for i in range(1, len(arr)):
-#         curr_ele = arr[i]
-#         j = i - 1
-#         while curr_ele < arr[j] and j >= 0:
-#             arr[j + 1] = arr[j]
-#             j -= 1
-#         arr[j+1] = curr_ele
-#     return arr
 
 def insertion_sort(input_arr):
     for i in range(1, len(input_arr)):
@@ -37,6 +28,47 @@ def insertion_sort(input_arr):
             j -= 1
         input_arr[j+1] = curr_ele
     return arr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def insertion_sort(input_arr):
+    for i in range(1, len(input_arr)):
+        curr_ele = input_arr[i]
+        j = i - 1
+        while j >= 0 and curr_ele < input_arr[j]:
+            input_arr[j+1] = input_arr[j]
+            j -= 1
+        input_arr[j+1] = curr_ele
+    return input_arr
+
+
 
 arr = [23, 4, 24, 15, 67, 345, 78, 32]
 print("------------------- un-sorted array :", arr)
