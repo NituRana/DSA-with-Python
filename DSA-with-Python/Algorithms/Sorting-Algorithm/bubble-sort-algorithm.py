@@ -31,37 +31,6 @@ Explanation: After sorting we get 1,2,3,4,5
 # print("-------------- Before sorting :", arr)
 # print("----- After sorting :", bubble_sort(arr))
 
-
-
-
-
-
-
-
-# def bubble_sort(unsort_array):
-#     arr_len = len(unsort_array)
-#     for i in range(0, arr_len-1):
-#         for j in range(i, arr_len):
-#             if unsort_array[i] > unsort_array[j]:
-#                 temp = unsort_array[i]
-#                 unsort_array[i] = unsort_array[j]
-#                 unsort_array[j] = temp
-#     return unsort_array
-
-
-
-
-
-# def bubble_sort(unsort_array):
-#     for i in range(len(unsort_array)-1):
-#         for j in range(i+1, len(unsort_array)):
-#             if unsort_array[i] > unsort_array[j]:
-#                 temp = unsort_array[i]
-#                 unsort_array[i] = unsort_array[j]
-#                 unsort_array[j] = temp
-#     return unsort_array
-
-
 def bubble_sort(arr):
     for i in range(0, len(arr)-1):
         for j in range(i+1, len(arr)):
@@ -69,6 +38,15 @@ def bubble_sort(arr):
                 temp = arr[i]
                 arr[i] = arr[j]
                 arr[j] = temp
+    return arr
+
+
+
+def bubble_sort(arr):
+    for i in range(0, len(arr)-1):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
     return arr
 
 input_array = [7, 8, 4, 6, 0, 3, 24, 15, 9]
