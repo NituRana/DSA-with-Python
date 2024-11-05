@@ -20,28 +20,6 @@ algo :
 step 1 : find the minimal 
 step 2 : swap the with the currect element position 
 '''
-
-# def selection_sort(arr):
-#     n = len(arr)
-#     for i in range(n):
-#         min_index = i
-        
-#         for j in range(i+1, n):
-#             if arr[j] < arr[min_index]:
-#                 min_index = j
-        
-#         arr[i], arr[min_index] = arr[min_index], arr[i]
-        
-#     return arr
-
-# def selection_sort(arr):
-#     for i in range(len(arr)):
-#         sorted_ele = i
-#         for j in range(i+1, len(arr)):
-#             if arr[sorted_ele] > arr[j]:
-#                 sorted_ele = j
-#         arr[i], arr[sorted_ele] = arr[sorted_ele], arr[i]
-#     return arr
                 
 # def selection_sort(arr):
 #     for i in range(len(arr)):
