@@ -21,22 +21,6 @@
 #     arr[i+1], arr[high] = arr[high], arr[i+1]
 #     return i+1
 
-# def quick_sort(arr, low, high):
-#     if low < high:
-#         partition_ele = partition(arr, low, high)
-#         left_side = quick_sort(arr, low, partition_ele-1)
-#         right_side = quick_sort(arr, partition_ele+1, high)
-
-# def partition(arr, low, high):
-#     pivot  = arr[high]
-#     i = low -1
-#     for j in range(low, high):
-#         if arr[j] <= pivot:
-#             i += 1
-#             arr[i], arr[j] = arr[j], arr[i]
-#     arr[i+1], arr[high] = arr[high], arr[i+1]
-#     return i+1
-
 # array = [34, 66, 23, 12, 35, 5, 67, 79, 42, 50, 85]
 # print("------------------- unsort array :", array)
 # quick_sort(array, 0, len(array)-1)
