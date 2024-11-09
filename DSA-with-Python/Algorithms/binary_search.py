@@ -1,4 +1,4 @@
-def binary_search_revisoin(arr, sear_ele):
+def binary_search(arr, sear_ele):
     min_ele = 0
     max_ele = len(arr) - 1
     
@@ -15,7 +15,7 @@ def binary_search_revisoin(arr, sear_ele):
 arr = [3, 4, 6, 7, 9, 12, 16, 17]
 target = 17
 # res = binary_search(arr, target)
-res = binary_search_revisoin(arr, target)
+res = binary_search(arr, target)
 if res == -1:
     print("The target is not present.")
 else:
