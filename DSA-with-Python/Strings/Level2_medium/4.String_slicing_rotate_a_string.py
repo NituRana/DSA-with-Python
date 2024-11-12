@@ -5,7 +5,7 @@ Input : s = "NituRanaSoftwareDeveloper"
 Output : Left rotation : "tuRanaSoftwareDeveloperNi"
          Right rotation : "erNituRanaSoftwareDevelop"
 ***********************************************************************************************************'''
-def rotate(input,d):
+def string_slicing(input,d):
  
     Lfirst = input[0 : d]
     Lsecond = input[d :]
@@ -18,4 +18,4 @@ def rotate(input,d):
 if __name__ == "__main__":
     input = 'NituRanaSoftwareDeveloper'
     d=2
-    rotate(input,d)
+    string_slicing(input,d)
