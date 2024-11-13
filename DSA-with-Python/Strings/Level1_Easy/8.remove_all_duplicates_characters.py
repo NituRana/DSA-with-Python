@@ -23,23 +23,7 @@ Output : c
 #     return result
 
 
-# def removeDuplicates(s):
-#     dict_of_char = {}
-#     for i in s:
-#         if i in dict_of_char:
-#             dict_of_char[i] += 1
-#         else:
-#             dict_of_char[i] = 1
-    
-#     result = ''
-#     for i in s:
-#         if dict_of_char[i] == 1:
-#             result += i
-
-#     return result
-
-
-def removeDuplicates(s):
+def removeAllDuplicates(s):
     char_dict = {}
     for i in s:
         if i in char_dict:
@@ -52,7 +36,7 @@ def removeDuplicates(s):
             res += i
     return res
 s = "Hello here, I'm nitu rana"
-res = removeDuplicates(s)
+res = removeAllDuplicates(s)
 print("-------------------- res : ", res)
 
    
