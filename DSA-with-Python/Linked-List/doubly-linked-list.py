@@ -48,17 +48,14 @@ class DoublyLinkedList:
             new_node.next = self.head
             self.head = new_node
 
-
-
-
-    # def deletion_in_dll(self, node):
-    #     temp = self.head
-    #     if temp is not None:
-    #         if temp.data == node:
-    #             self.head = temp.next
-    #             if self.head:
-    #                 self.head.prev = None
-    #             return
+    def deletion_in_dll(self, node):
+        temp = self.head
+        if temp is not None:
+            if temp.data == node:
+                self.head = temp.next
+                if self.head:
+                    self.head.prev = None
+                return
 
     #     while temp is not None:
     #         if temp.data == node:
