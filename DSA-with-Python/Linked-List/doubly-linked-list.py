@@ -39,14 +39,17 @@ class DoublyLinkedList:
         last.next = new_node
         new_node.prev = last
 
-    # def prepend(self, data):
-    #         new_node = Node(data)
-    #         if self.head is None:
-    #             self.head = new_node
-    #             return
-    #         self.head.prev = new_node
-    #         new_node.next = self.head
-    #         self.head = new_node
+    def prepend(self, data):
+            new_node = Node(data)
+            if self.head is None:
+                self.head = new_node
+                return
+            self.head.prev = new_node
+            new_node.next = self.head
+            self.head = new_node
+
+
+
 
     # def deletion_in_dll(self, node):
     #     temp = self.head
