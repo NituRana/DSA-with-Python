@@ -39,37 +39,37 @@ class DoublyLinkedList:
         last.next = new_node
         new_node.prev = last
 
-    def prepend(self, data):
-            new_node = Node(data)
-            if self.head is None:
-                self.head = new_node
-                return
-            self.head.prev = new_node
-            new_node.next = self.head
-            self.head = new_node
-    
-    def deletion_in_dll(self, node):
-        temp = self.head
-        if temp is not None:
-            if temp.data == node:
-                self.head = temp.next
-                if self.head:
-                    self.head.prev = None
-                return
+    # def prepend(self, data):
+    #         new_node = Node(data)
+    #         if self.head is None:
+    #             self.head = new_node
+    #             return
+    #         self.head.prev = new_node
+    #         new_node.next = self.head
+    #         self.head = new_node
 
-        while temp is not None:
-            if temp.data == node:
-                break
-            temp = temp.next
+    # def deletion_in_dll(self, node):
+    #     temp = self.head
+    #     if temp is not None:
+    #         if temp.data == node:
+    #             self.head = temp.next
+    #             if self.head:
+    #                 self.head.prev = None
+    #             return
 
-        if temp is None:
-            return
+    #     while temp is not None:
+    #         if temp.data == node:
+    #             break
+    #         temp = temp.next
+
+    #     if temp is None:
+    #         return
         
-        if temp.next is not None:
-            temp.next.prev = temp.prev
+    #     if temp.next is not None:
+    #         temp.next.prev = temp.prev
 
-        if temp.prev is not None:
-            temp.prev.next = temp.next
+    #     if temp.prev is not None:
+    #         temp.prev.next = temp.next
 
 
     def display(self):
@@ -86,7 +86,7 @@ dll = DoublyLinkedList()
 dll.append_in_dll(5)
 dll.append_in_dll(3)
 dll.append_in_dll(8)
-dll.deletion_in_dll(3)
-dll.prepend(0)
-dll.append_in_dll(4)
+# dll.deletion_in_dll(3)
+# dll.prepend(0)
+# dll.append_in_dll(4)
 dll.display()
