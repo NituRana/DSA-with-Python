@@ -56,20 +56,19 @@ class DoublyLinkedList:
                 if self.head:
                     self.head.prev = None
                 return
+        while temp is not None:
+            if temp.data == node:
+                break
+            temp = temp.next
 
-    #     while temp is not None:
-    #         if temp.data == node:
-    #             break
-    #         temp = temp.next
-
-    #     if temp is None:
-    #         return
+        if temp is None:
+            return
         
-    #     if temp.next is not None:
-    #         temp.next.prev = temp.prev
+        if temp.next is not None:
+            temp.next.prev = temp.prev
 
-    #     if temp.prev is not None:
-    #         temp.prev.next = temp.next
+        if temp.prev is not None:
+            temp.prev.next = temp.next
 
 
     def display(self):
