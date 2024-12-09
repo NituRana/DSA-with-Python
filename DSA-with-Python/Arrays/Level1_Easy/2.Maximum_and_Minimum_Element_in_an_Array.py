@@ -43,19 +43,19 @@ Bubble Sort - n^2
 
 
 ***********************************************************************************************************'''
-input_array = [2, 5, 1, 8, 4]
-def max_min_element_in_array(input_array):
-    max_element = input_array[0]
-    min_element = input_array[0]
-    for i in input_array:
-        if min_element > i:
-            min_element = i
-        elif max_element < i:
-            max_element = i
-    return min_element, max_element
-min_ele, max_ele = max_min_element_in_array(input_array)
-print("------------------------ min element :", min_ele)
-print("------------------------ max element :", max_ele)
+# input_array = [2, 5, 1, 8, 4]
+# def max_min_element_in_array(input_array):
+#     max_element = input_array[0]
+#     min_element = input_array[0]
+#     for i in input_array:
+#         if min_element > i:
+#             min_element = i
+#         elif max_element < i:
+#             max_element = i
+#     return min_element, max_element
+# min_ele, max_ele = max_min_element_in_array(input_array)
+# print("------------------------ min element :", min_ele)
+# print("------------------------ max element :", max_ele)
 
 
 
@@ -66,14 +66,14 @@ print("------------------------ max element :", max_ele)
 
 input_array = [2, 5, 1, 8, 4]
 def max_min_element_in_array(input_array):
-    max_element = input_array[0]
-    min_element = input_array[0]
-    for i in input_array:
-        if min_element > i:
-            min_element = i
-        elif max_element < i:
-            max_element = i
-    return min_element, max_element
+    min_ele = max_ele = input_array[0]
+
+    for i in range(0, len(input_array)-1):
+        if min_ele > input_array[i]:
+            min_ele = input_array[i]
+        elif max_ele < input_array[i]:
+            max_ele = input_array[i]
+    return min_ele, max_ele
 min_ele, max_ele = max_min_element_in_array(input_array)
 print("------------------------ min element :", min_ele)
 print("------------------------ max element :", max_ele)
