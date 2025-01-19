@@ -64,11 +64,28 @@ Explanation: There exist no such two numbers whose sum is equal to the target.
 a = [5, 7, 3, 2, 8, 9, 4]
 target = 15
 
-def tow_sum(a, target):
-    for i in range(0, len(a)-1):
-        for j in range(i+1, len(a)-1):
-            if a[i] + a[j] == target:
-                return "YES"
-    return "NO"
+# def tow_sum(a, target):
+#     for i in range(0, len(a)-1):
+#         for j in range(i+1, len(a)-1):
+#             if a[i] + a[j] == target:
+#                 return "YES"
+#     return "NO"
 
-print("----- Tow Sum revison :", tow_sum(a, target))
+# print("----- Tow Sum revison :", tow_sum(a, target))
+
+
+def two_sum(a, target):
+    n = len(a)
+    a.sort()
+    left = 0
+    right = n - 1
+    while left < right:
+        total = a[left] + a[right]
+        if total == target:
+            return "YES"
+        elif total < target:
+            left += 1
+        else:
+            right -= 1
+    return "NO"
+print("----- Tow Sum revison :", two_sum(a, target))
