@@ -4,7 +4,7 @@ Find consecutive characters frequency in the given string.
 Input : "hello here I am nitu rana"
 Output : [1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
-
+#revision - 1
 ***********************************************************************************************************'''
 input_str = '"hello here I am nitu rana"'
  

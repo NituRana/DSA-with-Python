@@ -6,7 +6,7 @@ Output : ['H', 'e', 'o', 'h', ',', 'I', "'", 'm', 'i', 't', 'u']
 
 
 ***********************************************************************************************************'''
-def convert(s):
+def convert_in_list_of_char(s):
     if(len(s) == 0):
         return
     s1 = ''
@@ -22,7 +22,7 @@ def convert(s):
 # Driver Code
 def main():
     s = "Hello here I am nitu rana"
-    convert(s)
+    convert_in_list_of_char(s)
      
 if __name__=="__main__":
     main()

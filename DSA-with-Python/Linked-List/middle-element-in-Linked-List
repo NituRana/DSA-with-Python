@@ -1,0 +1,58 @@
+'''
+Find middle element in a Linked List
+
+Problem Statement: Given the head of a linked list of integers, determine the middle node of the linked list. However, if the linked list has an even number of nodes, return the second middle node.
+
+Example 1:
+
+Input: LL: 1  2  3  4  5 
+Output: 3
+
+Explanation: Node with value 3 is the middle node of this linked list.
+'''
+
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+
+def find_middle(head):
+    if head is None or head.next is None:
+        return head
+
+    temp = head
+    count = 0
+    while temp is not None:
+        count += 1
+        temp = temp.next
+
+    # Calculate the position of
+    # the middle node.
+    mid = count // 2 + 1
+    temp = head
+    while temp is not None:
+        mid = mid -1
+
+        # Check if the middle position is reached.
+        if mid == 0:
+           # break out of the loop
+           # to return temp
+            break
+        
+        # Move temp ahead
+        temp = temp.next
+    return temp
+
+# Creating a sample linked list: 
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = Node(4)
+head.next.next.next.next = Node(5)
+
+middle_node = find_middle(head)
+print("The middle node value is:", middle_node.data)
