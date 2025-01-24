@@ -20,15 +20,30 @@ algo :
 step 1 : find the minimal 
 step 2 : swap the with the currect element position 
 '''
+                
+# def selection_sort(arr):
+#     for i in range(len(arr)):
+#         last_ele_of_sort = i
+#         for j in range(i+1, len(arr)):
+#             if arr[last_ele_of_sort] > arr[j]:
+#                 last_ele_of_sort = j
+#         arr[i], arr[last_ele_of_sort] = arr[last_ele_of_sort], arr[i]
+#     return arr
+
+# arr = [13, 46, 24, 52, 20, 9]
+# print(f"---- Input : {arr}")
+# print(f"---- output : {selection_sort(arr)}")
 
 def selection_sort(arr):
-    n = len(arr)
-    for i in range(0, n-1):
-        for j in range(i+1, n):
-            if arr[i] > arr[j]:
-                temp = arr[i]
-                arr[i] = arr[j]
-                arr[j] = temp
+    for i in range(len(arr)):
+        curr_ele = i
+        for j in range(i+1, len(arr)):
+            if arr[curr_ele] > arr[j]:
+                curr_ele = j
+        arr[i], arr[curr_ele] = arr[curr_ele], arr[i]
     return arr
-arr = [13,46,24,52,20,9]
-print(f"---- output : {selection_sort(arr)}")
+
+array = [46, 28, 23, 15, 56, 90, 42, 12]
+print("--------------------- unsorted array :", array)
+sorted_array = selection_sort(array)
+print("--------------------- sorted array :", sorted_array)

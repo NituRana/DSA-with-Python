@@ -14,7 +14,7 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 array = [1, 7, 3, 6, 9, 15, 0, 2]
-print("this is the ascending array : ", bubble_sort(array))
+print("this is the ascending array using bubble sort : ", bubble_sort(array))
 
 '''**********************************************************************************************************
 Bubble Sort - n^2

@@ -17,18 +17,60 @@ Output: 1,2,3,4,5
 Explanation: After sorting the array is: 1,2,3,4,5
 
 '''
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        key = arr[i]
-        
-        j = i - 1
-        while j >= 0 and key < arr[j]:
-            arr[j + 1] = arr[j]
-            j -= 1
-        arr[j + 1] = key
 
+
+def insertion_sort(input_arr):
+    for i in range(1, len(input_arr)):
+        curr_ele = input_arr[i]
+        j = i-1
+        while j >= 0 and input_arr[j] > curr_ele:
+            input_arr[j+1] = input_arr[j]
+            j -= 1
+        input_arr[j+1] = curr_ele
     return arr
-arr = [12, 11, 13, 5, 6]
-print("Un-sort array:", arr)
-sorted_arr = insertion_sort(arr)
-print("Sorted array:", sorted_arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def insertion_sort(input_arr):
+    for i in range(1, len(input_arr)):
+        curr_ele = input_arr[i]
+        j = i - 1
+        while j >= 0 and curr_ele < input_arr[j]:
+            input_arr[j+1] = input_arr[j]
+            j -= 1
+        input_arr[j+1] = curr_ele
+    return input_arr
+
+
+
+arr = [23, 4, 24, 15, 67, 345, 78, 32]
+print("------------------- un-sorted array :", arr)
+res = insertion_sort(arr)
+print("------------------- sorted array :", res)

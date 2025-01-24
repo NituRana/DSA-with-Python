@@ -14,6 +14,7 @@ for i in range(len):
     element = int(input("Enter the {} element  :- ".format(i)))
     sum = sum + element
     arr.append(element)
+    
 print("This is your array :- ",arr)
 print("The average of the array is :-",int(sum/len))
 

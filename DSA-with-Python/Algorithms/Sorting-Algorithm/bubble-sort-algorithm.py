@@ -17,29 +17,30 @@ Explanation: After sorting we get 1,2,3,4,5
 
 '''
 
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                temp = arr[j +1]
-                arr[j + 1] = arr[j]
-                arr[j] = temp
-    return arr
-
-arr = [13,46,24,52,20,9]
-print("-------------- Before sorting :", arr)
-print("----- After sorting :", bubble_sort(arr))
 # def bubble_sort(arr):
 #     n = len(arr)
-#     for i in range(0, n-1):
-#         for j in range(0, n-i-1):
-#             if arr[j] > arr[j+1]:
-#                 # temp = arr[j+1]
-#                 # arr[j+1] = arr[j]
-#                 # arr[j] = temp
-#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+#     for i in range(n):
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j + 1]:
+#                 temp = arr[j +1]
+#                 arr[j + 1] = arr[j]
+#                 arr[j] = temp
 #     return arr
 
 # arr = [13,46,24,52,20,9]
-# print(f"---- output : {bubble_sort(arr)}")
+# print("-------------- Before sorting :", arr)
+# print("----- After sorting :", bubble_sort(arr))
+
+
+
+def bubble_sort(arr):
+    for i in range(0, len(arr)-1):
+        for j in range(i+1, len(arr)):
+            if arr[i] > arr[j]:
+                arr[i], arr[j] = arr[j], arr[i]
+    return arr
+
+input_array = [7, 8, 4, 6, 0, 3, 24, 15, 9]
+print("--------------- input_array :", input_array)
+sorted_array = bubble_sort(input_array)
+print("--------------- sorted_array :", sorted_array)
