@@ -88,4 +88,3 @@ def two_sum(a, target):
         else:
             right -= 1
     return "NO"
-print("----- Tow Sum revison :", two_sum(a, target))
