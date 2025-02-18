@@ -128,7 +128,6 @@ class LinkedList:
         self.head = new_node
         new_node.next = curr_node
         return
-        
 
     def deletion_in_ll(self, data):
         curr_node = self.head
